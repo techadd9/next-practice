@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home({ posts }) {
 	// console.log(posts);
 	return (
@@ -5,7 +7,11 @@ export default function Home({ posts }) {
 			<h1>Welcome to My Blog</h1>
 			<ul>
 				{posts.map((post) => (
-					<li key={post.id}>{post.title}</li>
+					<li key={post.id}>
+						<Link href={`/posts/${post.id}`}>
+							<a>{post.title}</a>
+						</Link>
+					</li>
 				))}
 			</ul>
 		</div>
@@ -20,6 +26,6 @@ export const getServerSideProps = async () => {
 	return {
 		props: {
 			posts,
-		}
+		},
 	};
 };
