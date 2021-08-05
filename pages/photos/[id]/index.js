@@ -9,9 +9,11 @@ const index = ({ photo }) => {
 		<div>
 			<h2>image {title}</h2>
 			<Image src={url} width={500} height={500} alt={title} />
-			<Link href="/photos">
-				<a href="">go back</a>
-			</Link>
+			<p>
+				<Link href="/photos">
+					<a href="">go back</a>
+				</Link>
+			</p>
 		</div>
 	);
 };

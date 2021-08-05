@@ -7,3 +7,12 @@
 	display: flex;
 	flex-direction: column;
 }
+
+.photos li a {
+	display: block;
+	text-align: center;
+}
+
+.photos li span {
+	display: block;
+}
